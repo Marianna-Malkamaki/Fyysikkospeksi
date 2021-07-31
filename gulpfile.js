@@ -29,7 +29,7 @@ const watch = gulp.parallel(watchFiles, browserSync);
 // Lint Bootstrap in HTML
 gulp.task('bootlint', () => {
   return gulp.src('./index.html')
-    .pipe(bootlint());
+    .pipe(bootlint({ disabledIds: ['E041'] }));
 });
 
 // Lint Sass files
